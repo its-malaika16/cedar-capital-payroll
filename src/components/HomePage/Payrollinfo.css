@@ -1,0 +1,194 @@
+.payroll-section {
+  background: #0c2c26;
+  padding: 100px;
+}
+
+/* ✅ OUTER CARD */
+.payroll-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ✅ HEADER */
+.left h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.left h2 span {
+  color: #d4af37;
+}
+
+/* paragraph */
+.left p {
+  color: #aabdb6;
+  margin: 15px 0 25px;
+  max-width: 700px;
+}
+
+/* ✅ BULLETS */
+.bullets ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* ✅ equal spacing between items */
+  padding: 0;
+}
+
+
+.bullets {
+  display: grid;              /* ✅ THIS IS MISSING */
+  grid-template-columns: 1fr 1fr; /* ✅ creates 2 columns */
+  gap: 40px;
+}
+
+
+.bullets ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* ✅ equal spacing between items */
+  padding: 0;
+}
+
+
+.bullets li {
+  color: #b7c5c0;
+  margin-bottom: 10px;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ BUTTON */
+.cta-btn {
+  margin-top: 30px;
+  background: #d4af37;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ✅ BOTTOM GRID */
+.bottom-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* ✅ FEATURE BOX */
+.feature-box {
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover glow */
+.feature-box:hover {
+  border-color: rgba(212,175,55,0.5);
+  box-shadow: 0 0 20px rgba(212,175,55,0.1);
+  transform: translateY(-4px);
+}
+
+/* ✅ ICON */
+.icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #9fb3ad;
+  fill: none;
+  stroke-width: 1.8;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+/* hover icon gold */
+.feature-box:hover svg {
+  stroke: #d4af37;
+}
+
+/* titles */
+.feature-box h3 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.feature-box p {
+  color: #aabdb6;
+  font-size: 14px;
+}
+
+/* ✅ SHINE EFFECT */
+.feature-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(212,175,55,0.25),
+    transparent
+  );
+  opacity: 0;
+}
+
+.feature-box:hover::after {
+  opacity: 1;
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+  .payroll-section {
+    padding: 50px 20px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  
+.bullets {
+    grid-template-columns: 1fr; /* ✅ stack on mobile */
+    gap: 20px;
+  }
+
+}
+
+/* ✅ BULLET ALIGNMENT FIX */
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✅ SVG TICK STYLE */
+.tick-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+  flex-shrink: 0; /* ✅ prevents shrinking */
+}
+
+/* ✅ TEXT STYLE */
+.bullet-item span {
+  color: #b7c5c0;
+}
+

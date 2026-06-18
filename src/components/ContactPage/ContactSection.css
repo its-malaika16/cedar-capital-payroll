@@ -1,0 +1,146 @@
+.contact-main {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 100px 20px;
+  color: white;
+}
+
+/* ✅ CONTAINER */
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* ✅ FORM CARD */
+.form-card {
+  background: rgba(255,255,255,0.04);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* title */
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+/* ✅ INPUTS */
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: transparent;
+  color: white;
+}
+
+/* grid for name */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* textarea */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* ✅ BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #d4af37;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ RIGHT SIDE */
+.right-side h2 {
+  margin-bottom: 20px;
+}
+
+/* ✅ FAQ */
+.faq-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.faq-item h4 {
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  color: #aabdb6;
+}
+
+/* ✅ DEMO CARD */
+.demo-card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* icon */
+.icon-box {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 10px;
+  background: rgba(212,175,55,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+.icon-box svg {
+  width: 22px;
+  height: 22px;
+
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ FIELD WRAPPER */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* ✅ LABELS */
+.field label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #cfd8d5;
+  letter-spacing: 0.3px;
+}

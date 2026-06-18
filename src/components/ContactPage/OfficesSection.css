@@ -1,0 +1,115 @@
+.offices-section {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* ✅ TITLE */
+.offices-section h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.offices-section span {
+  color: #d4af37;
+}
+
+/* ✅ SUBTEXT */
+.subtitle {
+  color: #aabdb6;
+  margin-bottom: 50px;
+}
+
+/* ✅ GRID */
+.offices-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ✅ CARD */
+.office-card {
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.3s;
+}
+
+/* hover */
+.office-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212,175,55,0.5);
+  box-shadow: 0 0 20px rgba(212,175,55,0.15);
+}
+
+/* ✅ MAP IMAGE */
+.office-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ✅ CONTENT */
+.content {
+  padding: 20px;
+  text-align: left;
+}
+
+/* city */
+.content h3 {
+  font-size: 18px;
+}
+
+/* country */
+.country {
+  font-size: 11px;
+  color: #aabdb6;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* address */
+.content p {
+  font-size: 14px;
+  color: #cfd8d5;
+  margin-bottom: 15px;
+}
+
+/* ✅ LINK */
+.map-link {
+  color: #d4af37;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* hover */
+.map-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1024px) {
+  .offices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .offices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ MAP iframe */
+.office-card iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+}

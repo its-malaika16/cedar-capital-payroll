@@ -1,0 +1,227 @@
+.services-list {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 100px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* ✅ ROW */
+.service-row {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ✅ ALTERNATE */
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ✅ TEXT */
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 32px;
+  color: white;
+  line-height: 1.2;
+}
+
+.text p {
+  color: #aabdb6;
+  margin: 15px 0 25px;
+  max-width: 500px;
+}
+
+/* ✅ BULLETS */
+.bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bullets ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* ✅ TICK */
+.tick-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ✅ CARD SIDE */
+.visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ CARD */
+.card {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 30px;
+  border-radius: 15px;
+
+  width: 100%;
+  max-width: 420px; /* ✅ responsive width */
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* ✅ FAKE LINES */
+.lines span {
+  display: block;
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  margin: 10px 0;
+  border-radius: 3px;
+}
+
+/* ✅ STATUS */
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #aabdb6;
+}
+
+.active {
+  color: #d4af37;
+}
+
+
+/* ✅ ✅ ✅ LARGE SCREENS */
+@media (min-width: 1400px) {
+  .service-row {
+    max-width: 1300px;
+    gap: 80px;
+  }
+
+  .text h2 {
+    font-size: 36px;
+  }
+
+  .card {
+    max-width: 460px;
+  }
+}
+
+
+/* ✅ ✅ ✅ TABLET */
+@media (max-width: 1024px) {
+
+  .services-list {
+    padding: 80px 20px;
+    gap: 80px;
+  }
+
+  .service-row {
+    gap: 40px;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .card {
+    max-width: 360px;
+    padding: 25px;
+  }
+
+  .bullets {
+    gap: 25px;
+  }
+}
+
+
+/* ✅ ✅ ✅ SMALL LAPTOP / HALF SCREEN (IMPORTANT FIX) */
+@media (max-width: 900px) {
+
+  .service-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-row.reverse {
+    flex-direction: column; /* ✅ override reverse */
+  }
+
+  .text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bullets {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    margin-top: 20px;
+  }
+}
+
+
+/* ✅ ✅ ✅ MOBILE */
+@media (max-width: 768px) {
+
+  .services-list {
+    padding: 60px 15px;
+    gap: 70px;
+  }
+
+  .text h2 {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+
+/* ✅ ✅ ✅ EXTRA SMALL */
+@media (max-width: 480px) {
+
+  .services-list {
+    gap: 50px;
+  }
+
+  .text h2 {
+    font-size: 20px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+}

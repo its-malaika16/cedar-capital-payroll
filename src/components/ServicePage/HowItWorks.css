@@ -1,0 +1,104 @@
+.how-section {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* ✅ TITLE */
+.how-section h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.how-section span {
+  color: #d4af37;
+}
+
+.subtitle {
+  color: #aabdb6;
+  margin-bottom: 50px;
+}
+
+/* ✅ GRID */
+.steps-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ✅ CARD */
+.step-card {
+  text-align: left;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.3s;
+}
+
+/* hover */
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ✅ ACTIVE CARD */
+.step-card.active {
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 25px rgba(212,175,55,0.1);
+}
+
+/* ✅ TOP */
+.step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* number */
+.step-num {
+  font-size: 26px;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* icon */
+.step-icon {
+  background: rgba(212,175,55,0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ✅ TEXT */
+.step-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step-card p {
+  color: #aabdb6;
+  font-size: 14px;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-section h2 {
+    font-size: 28px;
+  }
+}

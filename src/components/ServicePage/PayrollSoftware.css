@@ -1,0 +1,180 @@
+.software-section {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 100px 20px;
+  color: white;
+}
+
+/* ✅ HEADER */
+.software-header {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+/* icon box */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+
+  background: rgba(212,175,55,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* icon */
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  stroke: #d4af37;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+/* header text */
+.software-header h2 {
+  font-size: 28px;
+}
+
+.software-header p {
+  color: #aabdb6;
+}
+
+/* ✅ CONTENT */
+.software-content {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ✅ LEFT */
+.left {
+  flex: 2;
+}
+
+.left h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  color: #aabdb6;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ✅ BULLETS */
+.bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.bullets ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* ✅ TICK */
+.tick-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ✅ RIGHT */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ CTA CARD */
+.cta-card {
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 15px;
+
+  width: 100%;
+  max-width: 350px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* card text */
+.cta-card h4 {
+  margin-bottom: 10px;
+}
+
+.cta-card p {
+  color: #aabdb6;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ✅ BUTTON */
+.demo-btn {
+  background: #d4af37;
+  color: black;
+  width: 100%;
+
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(212,175,55,0.4);
+}
+
+/* ✅ TABLET */
+@media (max-width: 1024px) {
+  .software-content {
+    gap: 40px;
+  }
+
+  .bullets {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+
+  .software-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left p {
+    margin: auto;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+}

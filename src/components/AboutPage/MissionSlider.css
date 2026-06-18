@@ -1,0 +1,136 @@
+.slider-section {
+  position: relative;
+
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 120px 20px;
+
+  text-align: center;
+  color: white;
+
+  overflow: hidden;
+}
+
+/* ✅ CONTENT */
+.slider-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ✅ ICON */
+.slider-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 12px;
+  background: rgba(212,175,55,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-icon svg {
+  width: 24px;
+  height: 24px;
+
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ✅ TITLE */
+.slider-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* ✅ TEXT */
+.slider-content p {
+  color: #b7c5c0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ✅ NAV BUTTONS */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+  color: white;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  display: flex;              /* ✅ FIX */
+  align-items: center;        /* ✅ CENTER VERTICALLY */
+  justify-content: center;    /* ✅ CENTER HORIZONTALLY */
+
+  line-height: 1;             /* ✅ REMOVE OFFSET */
+  padding: 0;                 /* ✅ CLEAN */
+
+  transition: 0.3s;
+}
+
+/* position */
+.left { left: 20px; }
+.right { right: 20px; }
+
+/* ✅ HOVER */
+.nav:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+/* ✅ DOTS */
+.dots {
+  margin-top: 25px;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  margin: 0 4px;
+
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* active */
+.dot.active {
+  background: #d4af37;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+
+  .slider-content h2 {
+    font-size: 24px;
+  }
+
+  .slider-content p {
+    font-size: 14px;
+  }
+
+  .nav {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}

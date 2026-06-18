@@ -1,0 +1,88 @@
+.cta-section {
+  background: #0c2c26;
+  padding: 100px;
+}
+
+/* ✅ CARD CONTAINER */
+.cta-card {
+  text-align: center;
+  padding: 60px 40px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(212,175,55,0.15);
+
+  /* soft outer glow */
+  box-shadow: 0 0 60px rgba(212,175,55,0.05);
+}
+
+/* ✅ TITLE */
+.cta-card h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* ✅ TEXT */
+.cta-card p {
+  color: #aabdb6;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* ✅ BUTTONS */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ✅ PRIMARY BUTTON */
+.btn-primary {
+  background: #d4af37;
+  color: black;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.4);
+  transform: translateY(-2px);
+}
+
+/* ✅ SECONDARY BUTTON */
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 26px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+.btn-secondary:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  box-shadow: 0 0 15px rgba(212,175,55,0.2);
+}
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

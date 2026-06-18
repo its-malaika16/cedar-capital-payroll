@@ -1,0 +1,219 @@
+.hero {
+  position: relative;
+  background: #0c2c26;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* ✅ BACKGROUND */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(212,175,55,0.25), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(30,90,70,0.4), transparent 50%);
+  filter: blur(120px);
+  animation: moveGlow 10s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow {
+  0% { transform: translateX(-40px); }
+  100% { transform: translateX(40px); }
+}
+
+/* ✅ CONTAINER */
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  flex-wrap: wrap; /* ✅ IMPORTANT */
+}
+
+/* ✅ LEFT */
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  margin-left: 30px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.1;
+}
+
+.gold {
+  color: #d4af37;
+}
+
+.tag {
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.hero-left p {
+  color: #b7c5c0;
+  margin: 15px 0 25px;
+  max-width: 500px;
+}
+
+/* ✅ BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #d4af37;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* ✅ FEATURES */
+.features {
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #aabdb6;
+  display: grid;
+  gap: 8px;
+}
+
+/* ✅ RIGHT */
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ DASHBOARD FIX */
+.dashboard-card {
+  width: 100%;
+  max-width: 420px; /* ✅ prevents overflow */
+}
+
+/* ✅ TABLET */
+@media (max-width: 1024px) {
+
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+}
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-container {
+    flex-direction: column; /* ✅ stack */
+    text-align: center;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+  .hero-left p {
+    margin: 10px auto 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .features {
+    text-align: left;
+  }
+}
+
+/* ✅ SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%; /* ✅ full width buttons */
+  }
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(212,175,55,0.15),
+    transparent 60%
+  );
+  filter: blur(120px);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0,0,0,0.2)
+  );
+}
+
+/* ✅ FEATURE ROW */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✅ SVG TICK STYLE */
+.tick-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* optional: make feature text cleaner */
+.feature-item span {
+  color: #aabdb6;
+}

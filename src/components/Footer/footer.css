@@ -1,0 +1,115 @@
+.footer {
+  background: linear-gradient(135deg, #0c2c26, #0a221d);
+  color: white;
+  padding: 70px 20px 30px;
+}
+
+/* ✅ LIMIT WIDTH (IMPORTANT FIX) */
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 50px;
+}
+
+/* ✅ LOGO */
+.footer-logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 35px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-logo span {
+  font-size: 11px;
+  color: #d4af37;
+}
+
+/* ✅ LEFT TEXT */
+.footer-left p {
+  color: #aabdb6;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* ✅ COLUMNS */
+.footer-col h4 {
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-col a {
+  display: block;
+  color: #b7c5c0;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #d4af37;
+}
+
+/* ✅ CONTACT */
+.footer-col.contact p {
+  color: #b7c5c0;
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.footer-col strong {
+  color: white;
+}
+
+/* icons */
+.contact-line {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✅ ✅ FIXED BOTTOM SECTION */
+.footer-bottom-wrapper {
+  max-width: 1300px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ✅ PERFECT CENTER TEXT */
+.footer-bottom {
+  text-align: center;
+  color: #9fb3ad;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer {
+    padding: 50px 20px;
+  }
+}

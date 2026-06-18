@@ -1,0 +1,94 @@
+.subscribe-section {
+  text-align: center;
+  background: #0c2c26;
+  padding: 100px 20px;
+  color: white;
+}
+
+/* ✅ TITLE */
+.subscribe-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* ✅ TEXT */
+.subscribe-section p {
+  color: #aabdb6;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* ✅ INPUT + BUTTON CONTAINER */
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ✅ INPUT WRAPPER */
+.input-wrapper {
+  position: relative;
+  width: 400px;
+}
+
+/* input */
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 14px 14px 45px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 14px;
+}
+
+/* icon */
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aabdb6;
+}
+
+/* ✅ BUTTON */
+.subscribe-btn {
+  background: #d4af37;
+  color: black;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+/* hover */
+.subscribe-btn:hover {
+  box-shadow: 0 0 18px rgba(212,175,55,0.4);
+  transform: translateY(-2px);
+}
+
+/* arrow icon */
+.send-icon {
+  font-size: 14px;
+}
+
+/* ✅ MOBILE */
+@media (max-width: 768px) {
+  .subscribe-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+}

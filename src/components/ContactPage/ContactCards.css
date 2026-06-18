@@ -1,0 +1,90 @@
+.contact-section {
+  background: linear-gradient(135deg, #0c2c26, #163b33);
+  padding: 80px 20px;
+}
+
+/* ✅ GRID */
+.contact-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ✅ CARD */
+.contact-card {
+  padding: 30px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+/* ✅ HOVER */
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212,175,55,0.5);
+  box-shadow: 0 0 20px rgba(212,175,55,0.15);
+}
+
+/* ✅ ICON */
+.icon-box {
+  width: 50px;
+  height: 50px;
+
+  background: rgba(212,175,55,0.12);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.icon-box svg {
+  width: 20px;
+  height: 20px;
+
+  stroke: #d4af37;
+  stroke-width: 2;
+  fill: none;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ✅ TEXT */
+.contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.main {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #aabdb6;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
