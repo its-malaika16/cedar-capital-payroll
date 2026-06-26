@@ -170,7 +170,6 @@ export default function ServicesList() {
             </div>
 
           </div>
-<div className="line"> </div>
         </div>
       ))}
 
