@@ -1,115 +1,156 @@
-.footer {
-  background: linear-gradient(135deg, #0c2c26, #0a221d);
-  color: white;
-  padding: 70px 20px 30px;
+/* ✅ REMOVE GLOBAL GAP ISSUE */
+body {
+  margin: 0;
 }
 
-/* ✅ LIMIT WIDTH (IMPORTANT FIX) */
-.footer-container {
-  max-width: 1300px;
-  margin: 0 auto;
+/* ✅ FOOTER BASE */
+.ccb-footer {
+  background: linear-gradient(135deg, #0b2f2a, #071912);
+  color: #e5e7eb;
+  margin-top: 0;
+}
 
+/* ✅ MAIN CONTAINER */
+.ccb-footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  gap: 50px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+
+  padding: 80px 6%;
+}
+
+/* ✅ COLUMN */
+.ccb-footer-col h4 {
+  color: #d4af37;
+  margin-bottom: 18px;
+  font-size: 14px;
 }
 
 /* ✅ LOGO */
-.footer-logo {
+.ccb-logo {
   display: flex;
-  gap: 10px;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.footer-logo img {
-  width: 35px;
+/* ✅ LOGO BOX */
+.ccb-logo-box img {
+  width: 40px;
 }
 
-.footer-logo h3 {
-  margin: 0;
-  font-size: 14px;
+/* ✅ LOGO TEXT (FIXED LAYOUT) */
+.ccb-logo-text {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-logo span {
-  font-size: 11px;
+.top-line {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.bottom-line {
+  font-size: 16px;
   color: #d4af37;
+  font-weight: 600;
+  margin-top: 2px;
 }
 
-/* ✅ LEFT TEXT */
-.footer-left p {
-  color: #aabdb6;
+/* ✅ DESCRIPTION */
+.ccb-footer-desc {
   font-size: 14px;
+  color: #b7c1bd;
   line-height: 1.6;
-  max-width: 320px;
 }
 
-/* ✅ COLUMNS */
-.footer-col h4 {
-  color: #d4af37;
-  margin-bottom: 15px;
-  font-size: 15px;
-}
-
-.footer-col a {
+/* ✅ LINKS */
+.ccb-footer-col a {
   display: block;
-  color: #b7c5c0;
-  text-decoration: none;
   margin-bottom: 10px;
+
+  text-decoration: none;
+  color: #cbd5e0;
+
   font-size: 14px;
   transition: 0.3s;
 }
 
-.footer-col a:hover {
+.ccb-footer-col a:hover {
   color: #d4af37;
 }
 
-/* ✅ CONTACT */
-.footer-col.contact p {
-  color: #b7c5c0;
-  font-size: 13px;
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-.footer-col strong {
-  color: white;
-}
-
-/* icons */
-.contact-line {
-  margin-top: 10px;
+/* ✅ CONTACT ROW */
+.ccb-contact-row {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: 10px;
+  align-items: flex-start;
+
+  margin-bottom: 12px;
 }
 
-/* ✅ ✅ FIXED BOTTOM SECTION */
-.footer-bottom-wrapper {
-  max-width: 1300px;
-  margin: 40px auto 0;
-  padding-top: 20px;
+/* ✅ ICON */
+.ccb-contact-icon {
+  width: 16px;
+  height: 16px;
 
-  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #d4af37;
+  margin-top: 3px;
+
+  flex-shrink: 0;
 }
 
-/* ✅ PERFECT CENTER TEXT */
-.footer-bottom {
+.ccb-contact-icon svg {
+  width: 16px;
+  height: 16px;
+
+  stroke: currentColor;
+  fill: none;
+
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ✅ TEXT */
+.ccb-contact-row p {
+  font-size: 14px;
+  color: #cbd5e0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ✅ CITY NAME */
+.ccb-city {
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* ✅ FOOTER BOTTOM */
+.ccb-footer-bottom {
   text-align: center;
-  color: #9fb3ad;
+
+  border-top: 1px solid rgba(212,175,55,0.15);
+  padding: 20px;
+
   font-size: 13px;
-  letter-spacing: 0.3px;
+  color: #9ca3af;
 }
 
 /* ✅ RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .ccb-footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
-  .footer-container {
+@media (max-width: 768px) {
+  .ccb-footer-container {
     grid-template-columns: 1fr;
-    gap: 30px;
+    padding: 60px 20px;
   }
 
-  .footer {
-    padding: 50px 20px;
+  .ccb-logo {
+    justify-content: center;
   }
 }

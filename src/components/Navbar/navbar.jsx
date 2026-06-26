@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function Navbar() {
   return (
@@ -27,7 +27,7 @@ export default function Navbar() {
             <NavLink to="/contact" className="nav-link">Contact</NavLink>
           </div>
 
-          <button className="nav-btn">
+          <button className="nav-btn"> 
             Get Started
           </button>
 

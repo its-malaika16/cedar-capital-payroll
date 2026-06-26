@@ -1,18 +1,20 @@
 /* ✅ WRAPPER BACKGROUND */
+
 .dashboard-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #0c2c26, #0f3b32);
-  box-sizing: border-box;
+  padding: 0;               /* ✅ no outer spacing */
+  background: none;         /* ✅ REMOVE background */
+  min-height: auto;         /* ✅ remove full-height box */
 }
+
 
 /* ✅ MAIN CARD */
 .dashboard-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
+  min-width: 600px;
   padding: 25px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);

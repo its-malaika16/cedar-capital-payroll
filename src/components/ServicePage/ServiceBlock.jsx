@@ -74,27 +74,12 @@ const services = [
       "Statutory payments (SSP, SMP, SPP)"
     ]
   },
-  {
-    title: "Timesheet Management",
-    desc: "Track working hours, overtime, and attendance with ease.",
-    label: "Timesheet",
-    reverse: false,
-    left: [
-      "Daily, weekly, and monthly timesheets",
-      "Holiday and absence management",
-      "Integration with payroll calculations"
-    ],
-    right: [
-      "Overtime calculation and tracking",
-      "Manager approval workflows",
-      "Export to various formats"
-    ]
-  },
+  
   {
     title: "Employee Self-Service Portal",
     desc: "Employees can access their payslips and documents securely.",
     label: "Employee Portal",
-    reverse: true,
+    reverse: false,
     left: [
       "Secure email-based access",
       "View and download payslips",
@@ -110,7 +95,7 @@ const services = [
     title: "UK Compliance & Reporting",
     desc: "Stay compliant with all HMRC regulations and requirements.",
     label: "UK Compliance",
-    reverse: false,
+    reverse: true,
     left: [
       "Real-Time Information (RTI) submissions",
       "Gender pay gap reporting",
@@ -185,7 +170,7 @@ export default function ServicesList() {
             </div>
 
           </div>
-
+<div className="line"> </div>
         </div>
       ))}
 

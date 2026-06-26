@@ -1,14 +1,52 @@
 import "./HowItWorks.css";
 
 /* ✅ SVG ICONS */
+
 const icons = {
-  company: "",
-  employees: "👥",
-  data: "📋",
-  payroll: "💷",
-  review: "✅",
-  report: "✉️"
+  company: (
+    <svg viewBox="0 0 24 24">
+      <rect x="6" y="5" width="12" height="14" rx="2" />
+      <path d="M9 9h2M9 13h2M13 9h2M13 13h2" />
+    </svg>
+  ),
+
+  employees: (
+    <svg viewBox="0 0 24 24">
+      <circle cx="8" cy="9" r="3" />
+      <path d="M2 20c2-4 12-4 12 0" />
+      <circle cx="17" cy="7" r="2" />
+    </svg>
+  ),
+
+  data: (
+    <svg viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="16" rx="2" />
+      <path d="M9 8h6M9 12h6M9 16h4" />
+    </svg>
+  ),
+
+  payroll: (
+    <svg viewBox="0 0 24 24">
+      <path d="M6 6h12M6 10h12M6 14h6" />
+      <path d="M16 18h3M17.5 16.5v3" />
+    </svg>
+  ),
+
+  review: (
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M7 12l3 3 7-7" />
+    </svg>
+  ),
+
+  report: (
+    <svg viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z" />
+      <path d="M4 6l8 6 8-6" />
+    </svg>
+  )
 };
+
 
 const steps = [
   {
