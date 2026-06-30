@@ -1,4 +1,4 @@
-import "./PayrollInfo.css";
+import "./Payrollinfo.css";
 
 const Tick = () => (
   <svg
