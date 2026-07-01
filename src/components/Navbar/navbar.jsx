@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
-
       <div className="nav-container">
 
-        {/* ✅ LEFT: LOGO */}
+        {/* ✅ LOGO */}
         <div className="nav-logo">
           <img src="/assets/logo/cedar-bank.png" alt="logo" />
 
@@ -17,24 +19,60 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ✅ RIGHT: LINKS + BUTTON */}
-        <div className="nav-right">
+        {/* ✅ HAMBURGER */}
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
+        {/* ✅ LINKS + BUTTON */}
+        <div className={`nav-right ${menuOpen ? "active" : ""}`}>
 
           <div className="nav-links">
-            <NavLink to="/" className="nav-link">Home</NavLink>
-            <NavLink to="/services" className="nav-link">Services</NavLink>
-            <NavLink to="/about" className="nav-link">About</NavLink>
-            <NavLink to="/contact" className="nav-link">Contact</NavLink>
+
+            <NavLink
+              to="/"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/services"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Services
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </NavLink>
+
           </div>
 
-          <button className="nav-btn"> 
+          <button className="nav-btn">
             Get Started
           </button>
 
         </div>
 
       </div>
-
     </nav>
   );
 }

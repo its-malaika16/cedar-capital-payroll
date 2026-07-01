@@ -10,11 +10,13 @@ import Footer from './components/Footer/footer.jsx';
 import PrivacyPolicy from './pages/PrivacyPage.jsx';
 import CookiePolicy from './pages/CookiePage.jsx';
 import TermsPolicy from './pages/TermsPage.jsx';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     <Router>
+         <ScrollToTop />
       { <Navbar /> }
       <Routes>
         <Route path="/" element={<Home />} />

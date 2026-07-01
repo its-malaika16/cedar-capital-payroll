@@ -2,11 +2,13 @@
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
+
+  z-index: 1000;
 
   background: #0c2c26;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ✅ CONTAINER */
@@ -16,6 +18,7 @@
   justify-content: space-between;
 
   padding: 15px 80px;
+  position: relative;
 }
 
 /* ✅ LOGO */
@@ -27,13 +30,15 @@
 
 .nav-logo img {
   width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
-/* logo text */
+/* ✅ LOGO TEXT */
 .logo-text h3 {
   margin: 0;
   font-size: 14px;
-  color: white;
+  color: #ffffff;
 }
 
 .logo-text span {
@@ -42,7 +47,7 @@
   letter-spacing: 1px;
 }
 
-/* ✅ RIGHT SIDE GROUP */
+/* ✅ RIGHT SIDE */
 .nav-right {
   display: flex;
   align-items: center;
@@ -52,24 +57,21 @@
 /* ✅ LINKS */
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 
-/* links style */
 .nav-link {
   text-decoration: none;
   color: #aabdb6;
   font-size: 14px;
-  position: relative;
   transition: 0.3s;
 }
 
-/* ✅ HOVER */
 .nav-link:hover {
   color: #d4af37;
 }
 
-/* ✅ ACTIVE */
 .nav-link.active {
   color: #d4af37;
 }
@@ -77,33 +79,97 @@
 /* ✅ BUTTON */
 .nav-btn {
   background: #d4af37;
-  color: black;
+  color: #000;
+
   border: none;
-  padding: 10px 18px;
   border-radius: 8px;
+
+  padding: 10px 18px;
+
   font-weight: 600;
   cursor: pointer;
+
   transition: 0.3s;
 }
 
-/* button hover */
 .nav-btn:hover {
-  box-shadow: 0 0 15px rgba(212,175,55,0.4);
   transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
+/* ✅ MENU ICON */
+.menu-toggle {
+  display: none;
+
+  background: none;
+  border: none;
+
+  color: white;
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+/* ================================= */
 /* ✅ MOBILE */
+/* ================================= */
+
 @media (max-width: 768px) {
+
   .nav-container {
     padding: 15px 20px;
   }
 
-  .nav-links {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-right {
     display: none;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #0c2c26;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    flex-direction: column;
+    gap: 18px;
+
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 16px;
   }
 
   .nav-btn {
-    padding: 8px 14px;
-    font-size: 13px;
+    margin-top: 20px;
+    width: 180px;
+  }
+
+  .logo-text h3 {
+    font-size: 12px;
+  }
+
+  .logo-text span {
+    font-size: 10px;
   }
 }
