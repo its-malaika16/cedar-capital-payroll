@@ -1,4 +1,5 @@
 import "./Payrollinfo.css";
+import { Link } from "react-router-dom";
 
 const Tick = () => (
   <svg
@@ -72,9 +73,11 @@ export default function PayrollInfo() {
             </div>
 
 
-            <button className="cta-btn">
-              Learn More About Us →
-            </button>
+            <Link to="/contact">
+              <button className="cta-btn">
+                Learn More About Us →
+              </button>
+            </Link>
           </div>
 
         </div>

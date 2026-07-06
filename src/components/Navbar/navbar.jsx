@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,9 +67,11 @@ export default function Navbar() {
 
           </div>
 
-          <button className="nav-btn">
-            Get Started
-          </button>
+          <Link to="/contact">
+            <button className="nav-btn">
+              Get Started
+            </button>
+          </Link>
 
         </div>
 

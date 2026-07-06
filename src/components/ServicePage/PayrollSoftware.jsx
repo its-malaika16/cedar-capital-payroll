@@ -1,4 +1,5 @@
 import "./PayrollSoftware.css";
+import { Link } from "react-router-dom";
 
 /* ✅ GOLD TICK */
 const Tick = () => (
@@ -80,9 +81,11 @@ export default function PayrollSoftware() {
               No credit card required.
             </p>
 
-            <button className="demo-btn">
-              Request Demo
-            </button>
+            <Link to="/contact">
+              <button className="demo-btn">
+                Request Demo
+              </button>
+            </Link>
 
           </div>
 

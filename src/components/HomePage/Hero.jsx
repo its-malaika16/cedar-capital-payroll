@@ -1,5 +1,6 @@
 import "./Hero.css";
 import DashboardDemo from "./DashboardDemo";
+import { Link } from "react-router-dom";
 
 const Tick = () => (
   <svg viewBox="0 0 24 24" className="tick-icon">
@@ -35,8 +36,12 @@ export default function PayrollHero() {
 
           {/* ✅ CTA */}
           <div className="buttons">
-            <button className="btn-primary">Get Started Free →</button>
-            <button className="btn-secondary">Explore Features</button>
+            <Link to="/contact">
+              <button className="btn-primary">Get Started Free →</button>
+            </Link>
+            <Link to="/services">
+              <button className="btn-secondary">Explore Features</button>
+            </Link>
           </div>
 
           {/* ✅ FEATURES */}

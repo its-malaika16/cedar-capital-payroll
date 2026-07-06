@@ -1,4 +1,5 @@
 import "./ManagedService.css";
+import { Link } from "react-router-dom";
 
 /* ✅ SVG ICONS (GOLD STYLE) */
 const Icon = ({ type }) => {
@@ -95,7 +96,9 @@ export default function ManagedService() {
 
         {/* RIGHT */}
         <div className="right">
-          <button className="quote-btn">Get a Quote</button>
+          <Link to="/contact">
+            <button className="quote-btn">Get a Quote</button>
+          </Link>
         </div>
 
       </div>
