@@ -14,7 +14,7 @@ export default function AboutHero() {
 
         <h1>
           About <br />
-          <span>Cedar Capital</span>
+          <span className="subheading">Cedar Capital</span>
         </h1>
 
         {/* divider */}

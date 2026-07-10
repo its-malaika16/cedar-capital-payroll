@@ -48,7 +48,7 @@ export default function OfficesSection() {
     <section className="offices-section">
 
       <h2>
-        Visit Our <span>Offices</span>
+        Visit Our <span className="yellow-text">Offices</span>
       </h2>
 
       <p className="subtitle">

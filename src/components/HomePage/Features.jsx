@@ -77,7 +77,7 @@ export default function Features() {
         <section className="features-section">
 
             <h2>
-                Everything You Need for <span>Payroll</span>
+                Everything You Need for <span className="yellow-text">Payroll</span>
             </h2>
 
             <p>From employee management to tax calculations, our comprehensive platform handles every aspect of payroll processing. </p>

@@ -14,7 +14,7 @@ export default function ServicesHero() {
 
         <h1>
           Our Payroll <br />
-          <span>Services</span>
+          <span className="subheading">Services</span>
         </h1>
 
         {/* divider */}
@@ -33,7 +33,7 @@ export default function ServicesHero() {
       </div>
 
       {/* ✅ BREADCRUMB */}
-      <div className="breadcrumb">
+      <div className="breadcrumb Subheading">
         HOME <span>›</span> <span className="active">SERVICES</span>
       </div>
 

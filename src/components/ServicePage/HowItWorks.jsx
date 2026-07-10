@@ -94,7 +94,7 @@ export default function HowItWorks() {
 
       {/* ✅ HEADER */}
       <h2>
-        How It <span>Works</span>
+        How It <span className="yellow-text">Works</span>
       </h2>
 
       <p className="subtitle">

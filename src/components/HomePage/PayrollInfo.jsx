@@ -45,7 +45,7 @@ export default function PayrollInfo() {
 
           <div className="left">
             <h2>
-              Efficient & Reliable <span>Payroll</span>
+              Efficient & Reliable <span className="yellow-text">Payroll</span>
             </h2>
 
             <p>

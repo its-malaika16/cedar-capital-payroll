@@ -26,7 +26,7 @@ export default function ContactHero() {
 
         <p>
           Have questions about Cedar Capital Payroll? Our UK-based team is here to help. Reach out and we'll get back to you 
-          <strong>within 24 hours.</strong>
+          <strong> within 24 hours.</strong>
         </p>
 
       </div>

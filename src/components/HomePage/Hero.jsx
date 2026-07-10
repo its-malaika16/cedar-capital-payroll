@@ -22,11 +22,11 @@ export default function PayrollHero() {
         {/* ✅ LEFT */}
         <div className="hero-left">
 
-          <span className="tag">PROFESSIONAL PAYROLL SERVICES</span>
+          <span className="tag subheading">PROFESSIONAL PAYROLL SERVICES</span>
 
           <h1>
             Your people,<br />
-            <span className="gold">paid right.</span>
+            <span className="gold yellow-text">paid right.</span>
           </h1>
 
           <p>
