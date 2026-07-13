@@ -17,7 +17,7 @@ export default function OurStory() {
             />
           </div>
 
-          <span className="tag">FOUNDER</span>
+          <span className="tag subheading">FOUNDER</span>
 
           <h3>Ali A Hammoud</h3>
 
@@ -28,13 +28,13 @@ export default function OurStory() {
         {/* RIGHT CONTENT */}
         <div className="right-content">
 
-          <span className="small-tag">
+          <span className="small-tag subheading">
             OUR STORY
           </span>
 
           <h1>
-            Built on <span>trust</span>, driven by
-            <span> precision</span>.
+            Built on <span className="yellow-text">trust</span>, driven by
+            <span className="yellow-text">precision</span>.
           </h1>
 
           <div className="paragraphs">

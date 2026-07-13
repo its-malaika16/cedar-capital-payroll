@@ -162,8 +162,9 @@
   }
 
   .image-wrapper {
-    height: 700px;
-     aspect-ratio: 3 / 4;
+    height: 500px;
+    max-width: 500px;
+    margin: 0 auto 20px;
   }
 }
 
@@ -175,7 +176,8 @@
 
   .image-wrapper {
     height: 500px;
-    aspect-ratio: 3 / 4;
+    max-width: 500px;
+    margin: 0 auto 20px;
   }
 
   .stats {
