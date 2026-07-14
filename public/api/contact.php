@@ -33,9 +33,9 @@ if (!$data) {
 $firstname  = trim($data["firstname"] ?? "");
 $lastname   = trim($data["lastname"] ?? "");
 $email      = trim($data["email"] ?? "");
-$phone    = trim($data["phone"] ?? "");
-$company      = trim($data["company"] ?? "");
-$employees   = trim($data["employees"] ?? "");
+$phone      = trim($data["phone"] ?? "");
+$company    = trim($data["company"] ?? "");
+$employees  = trim($data["employees"] ?? "");
 $description = trim($data["description"] ?? "");
 
 // Validate required fields
@@ -47,20 +47,24 @@ if (
     empty($phone)
 ) {
     http_response_code(400);
+
     echo json_encode([
         "success" => false,
         "message" => "Please fill all required fields."
     ]);
+
     exit();
 }
 
 // Validate email
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
+
     echo json_encode([
         "success" => false,
         "message" => "Invalid email address."
     ]);
+
     exit();
 }
 
@@ -70,6 +74,17 @@ $sql = "INSERT INTO CedarBank
 VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    http_response_code(500);
+
+    echo json_encode([
+        "success" => false,
+        "message" => $conn->error
+    ]);
+
+    exit();
+}
 
 $stmt->bind_param(
     "sssssss",
@@ -84,6 +99,36 @@ $stmt->bind_param(
 
 if ($stmt->execute()) {
 
+    // Send notification email
+    $to = "support@cedarpayroll.com";
+    $subject = "New Cedar Payroll Enquiry";
+
+    $message = "
+    <html>
+    <body>
+        <h2>New Cedar Payroll Enquiry</h2>
+
+        <p><strong>First Name:</strong> {$firstname}</p>
+        <p><strong>Last Name:</strong> {$lastname}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Phone:</strong> {$phone}</p>
+        <p><strong>Company:</strong> {$company}</p>
+        <p><strong>Employees:</strong> {$employees}</p>
+
+        <p><strong>Description:</strong></p>
+        <p>{$description}</p>
+    </body>
+    </html>
+    ";
+
+    $headers  = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "From: Cedar Payroll <noreply@cedarpayroll.com>\r\n";
+    $headers .= "Reply-To: {$email}\r\n";
+
+    // Send email
+    mail($to, $subject, $message, $headers);
+
     echo json_encode([
         "success" => true,
         "message" => "Form submitted successfully."
@@ -95,11 +140,10 @@ if ($stmt->execute()) {
 
     echo json_encode([
         "success" => false,
-        "message" => "Database insert failed."
+        "message" => $stmt->error
     ]);
-
 }
- 
+
 $stmt->close();
 $conn->close();
 
